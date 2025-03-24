@@ -1,0 +1,13 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+
+    <changeSet id="20250326_0.0.3_f_test" author="mgrom" dbms="postgresql">
+        <sqlFile splitStatements="false" path="changelog/changesets/20250326_0.0.3_f_test/functions/f_test.sql"/>
+        <rollback>
+            <sqlFile splitStatements="false" path="changelog/changesets/20250326_0.0.3_f_test/rollback/functions/f_test.sql"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>

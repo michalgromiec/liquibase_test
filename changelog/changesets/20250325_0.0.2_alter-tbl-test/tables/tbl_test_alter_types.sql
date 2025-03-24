@@ -1,0 +1,1 @@
+ALTER TABLE public.tbl_test ALTER COLUMN id TYPE BIGINT;
