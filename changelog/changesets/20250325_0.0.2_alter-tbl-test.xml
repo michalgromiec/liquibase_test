@@ -5,6 +5,7 @@
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
 
     <changeSet id="20250325_0.0.2_alter-tbl-test" author="mgrom" dbms="postgresql">
+        <comment>test comment to show in databasechangelog</comment>
         <sql>
             SELECT 1;
         </sql>

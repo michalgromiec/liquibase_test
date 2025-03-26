@@ -1,0 +1,38 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+
+    <changeSet id="20250326_0.0.4_tbl_created_using_xml" author="mgrom">
+        <comment>This changelog is done using xml - it is independent on target database</comment>
+        <createTable tableName="company">
+            <column name="id" type="bigint"/>
+            <column name="address" type="varchar(255)"/>
+            <column name="city" type="varchar(255)"/>
+            <column name="is_valid" type="smallint"/>
+        </createTable>
+        <addColumn tableName="company">
+            <column name="name" type="varchar(255)"/>
+        </addColumn>
+        <addUniqueConstraint columnNames="name" tableName="company" constraintName="unique_name"/>
+        <addPrimaryKey columnNames="id" tableName="company" constraintName="pk_company"/>
+        <insert tableName="company">
+            <column name="id" valueNumeric="1"/>
+            <column name="name" value="Company 1"/>
+            <column name="address" value="Address 1"/>
+            <column name="city" value="City 1"/>
+            <column name="is_valid" valueNumeric="1"/>
+        </insert>
+        <insert tableName="company">
+            <column name="id" valueNumeric="2"/>
+            <column name="name" value="Company 2"/>
+            <column name="address" value="Address 2"/>
+            <column name="city" value="City 2"/>
+            <column name="is_valid" valueNumeric="1"/>
+        </insert>
+        <rollback>
+            <dropTable tableName="company"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>

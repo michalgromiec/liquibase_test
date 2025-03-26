@@ -6,8 +6,10 @@
   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"
 >
 
+    <include relativeToChangelogFile="true" file="changesets/20250301_0.0.0_setup.xml"/>
     <include relativeToChangelogFile="true" file="changesets/20250324_0.0.1_initial-queries.xml"/>
     <include relativeToChangelogFile="true" file="changesets/20250325_0.0.2_alter-tbl-test.xml"/>
     <include relativeToChangelogFile="true" file="changesets/20250326_0.0.3_f_test.xml"/>
+    <include relativeToChangelogFile="true" file="changesets/20250326_0.0.4_tbl_created_using_xml.xml"/>
 
 </databaseChangeLog>
